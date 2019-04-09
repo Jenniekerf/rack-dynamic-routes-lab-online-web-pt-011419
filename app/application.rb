@@ -22,21 +22,10 @@ class Application
         
       end
     else 
-    resp.write "Route not found"
-    resp.status = 404
-    
-#     if requested item matches (/items/) but I don't have it:
-#     resp.write "Item not found"
-#     resp.status = 400
-    
- 
-  end
-  #binding.pry
+      resp.status = 404
+      resp.write "Route not found"
+    end
   
-  # item_names = @@items.collect {|i| i.name }
-  
-  
-  
-   resp.finish 
+  resp.finish 
   end
 end
