@@ -12,7 +12,7 @@ class Application
     if req.path.match(/items/)  #and the requested item exists
     
     x = req.path.split(/items/).last
-    binding.pry
+    #binding.pry
       @@items.each do |item|
         resp.write "#{item.price}"
       end
