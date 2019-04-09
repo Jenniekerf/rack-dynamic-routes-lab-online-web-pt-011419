@@ -9,7 +9,7 @@ class Application
    req = Rack::Request.new(env)
    
 
-    if req.path.match(/items/)  #and if item exists
+    if req.path.match(/items/)  #and the requested item exists
       @@items.each do |item|
         resp.write "#{item.price}"
       end
@@ -17,7 +17,7 @@ class Application
     resp.write "Route not found"
     resp.status = 404
     
-#     if item matches (/items/) but I don't have it:
+#     if requested item matches (/items/) but I don't have it:
 #     resp.write "Item not found"
 #     resp.status = 400
     
